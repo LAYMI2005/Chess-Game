@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Master</title>
+    <link rel="stylesheet" href="ChessStyle.css" />
+</head>
+<body>
+
+    <h1 class="rainbow-text">Chess Master</h1>
+
+    <div class="controls">
+        <button id="new-game">New Game</button>
+        <button id="mode-pp">Player vs Player</button>
+        <button id="mode-pb">Player vs Bot</button>
+        <button id="pause-game">Pause Game</button>
+        
+        <select id="bot-difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+            <option value="expert">Expert</option>
+            <option value="nightmare">Nightmare Bot</option>
+        </select>
+
+        <button id="mode-dark" class="dark-toggle">Dark Mode</button>
+    </div>
+
+    <div class="info-row">
+        <div id="status">Select a Mode to Start</div>
+        <div id="current-date">Date: --/--/----</div>
+        <div id="total-game-time">Total Time: 00:00</div>
+    </div>
+
+    <div class="timer-row">
+        <div class="timer white-timer">White: 30s</div>
+        <div class="timer black-timer">Black: 30s</div>
+    </div>
+
+    <div class="game-layout">
+        <div class="board" id="chessboard"></div>
+
+        <div id="game-log" class="game-log">
+            <h3>Game Insights</h3>
+            <div id="log-message">Game started! Good luck.</div>
+        </div>
+    </div>
+
+    <div class="leaderboard-container">
+        <h2>🏆 Fastest Wins Leaderboard</h2>
+        <table id="leaderboard">
+            <thead>
+                <tr>
+                    <th>Winner</th>
+                    <th>Mode</th>
+                    <th>Difficulty</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                </tbody>
+        </table>
+        <button id="clear-leaderboard" style="margin-top: 10px;">Clear Leaderboard</button>
+    </div>
+
+    <script src="ChessController.js"></script>
+</body>
+</html>
